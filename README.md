@@ -1,25 +1,48 @@
-# BSOL sample project folder
+# **GP Practice Segmentation Using Unsupervised Machine Learning**
 
-This git repository contains a shell that should be used as the default structure for new projects
-in the analytical team.  It won't fit all circumstances perfectly, and you can make changes and issue a 
-pull request for new features / changes.
+## **Project Overview**
+This project aims to apply **unsupervised machine learning** techniques, specifically **K-Means clustering** and **Hierarchical clustering**, to segment **General Practitioner (GP) practices** based on **Quality and Outcomes Framework (QOF) performance measures** and other **demographic markers**. By identifying meaningful clusters, this analysis will help uncover patterns in healthcare performance and inform targeted interventions.
 
-The aim of this template is two-fold: firstly to give a common structure for analytical projects to aid
-reproducibility, secondly to allow for additional security settings as default to prevent accidental upload of files that should not be committed to Git and GitHub.
+## **Objectives**
+- Explore and preprocess **QOF performance data** and **demographic indicators**.
+- Apply **K-Means** and **Hierarchical clustering** to group GP practices into meaningful segments.
+- Evaluate the clustering results to identify patterns and insights.
+- Visualize and interpret the clusters for actionable recommendations.
 
-__Please update/replace this README file with one relevant to your project__
+## **Project Status**
+🟢 **Ongoing** (Early Stages)  
+- **Data collection**: In progress  
+- **Data cleaning and preprocessing**: Not started  
+- **Feature selection**: Not started  
+- **Clustering implementation**: Not started  
+- **Evaluation and visualization**: Not started  
 
-## To use this template, please use the following practises:
+## **Data Sources**
+The analysis will utilize publicly available data, including but not limited to:
+- **Quality and Outcomes Framework (QOF)** – Performance measures of GP practices.
+- **Demographic Data** – Population characteristics, socioeconomic factors, and regional variations.
+- **Additional Datasets** – Any relevant healthcare indicators.
 
-* Put any data files in the `data` folder.  This folder is explicitly named in the .gitignore file.  A further layer of security is that all xls, xlsx, csv and pdf files are also explicit ignored in the whole folder as well.  ___If you need to commit one of these files, you must use the `-f` (force) command in `commit`, but you must be sure there is no identifiable data.__
-* Save any documentation, images of support files in the `assets` folder.  This does not mean you should avoid commenting your code, but if you have an operating procedure or supporting documents, add them to this folder.
-* Please save all outputs: data, formatted tables, graphs etc. in the output folder.  This is also implicitly ignored by git, but you can use the `-f` (force) command in `commit` to add any you wish to publish to github.
+## **Methodology**
+1. **Data Preparation**
+   - Collect and preprocess **QOF and demographic data**.
+   - Handle missing values, outliers, and standardize features.
+   
+2. **Feature Engineering**
+   - Select relevant performance and demographic metrics.
+   - Apply **dimensionality reduction (if needed)** to improve clustering performance.
 
+3. **Clustering Techniques**
+   - Implement **K-Means clustering** to segment GP practices.
+   - Use **Hierarchical clustering** for alternative segmentation and comparison.
 
-### Please also consider the following:
-* Linting your code.  This is a formatting process that follows a rule set.  We broadly encourage the tidyverse standard, and recommend the `lintr` package.
-* Comment your code to make sure others can follow.
-* Consider your naming conventions: we recommend `snake case` where spaces are replaced by underscores and no capitals are use. E.g. `outpatient_referral_data`
+4. **Model Evaluation**
+   - Use **Elbow Method** and **Silhouette Score** to determine the optimal number of clusters.
+   - Compare clustering results and interpret key patterns.
+
+5. **Visualization & Insights**
+   - Generate **heatmaps**, **scatter plots**, and **geospatial maps** to illustrate cluster characteristics.
+   - Summarize findings to inform policy recommendations.
 
 
 This repository is dual licensed under the [Open Government v3]([https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) & MIT. All code can outputs are subject to Crown Copyright.
